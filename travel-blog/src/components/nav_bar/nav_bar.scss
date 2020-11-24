@@ -1,0 +1,78 @@
+@import '../../App.scss';
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary-light;
+}
+
+.nav__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: $site-width;
+}
+
+.nav__left {
+    display: flex;
+    flex-direction: column;
+    margin-left: $gutter;
+}
+
+.nav__title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.nav__subtitle {
+    font-size: .75rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: auto;
+}
+
+.nav__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav__button {
+    text-decoration: none;
+    padding: $gutter;
+    margin-right: $gutter;
+    color: $gray;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.nav__button:hover {
+    cursor: pointer;
+}
+
+.nav__button--about {
+    background: $primary;
+    color: white;
+    border-radius: 5px;
+}
+
+@media (max-width: $medium-breakpoint) {
+    .nav__content {
+        justify-content: center;
+    }
+
+    .nav__left {
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .nav__right {
+        display: none;
+    }
+}
